@@ -1,0 +1,29 @@
+cox3d/
+├── datasets/
+│   ├── ugc_dataset.py          # CoX-3D Dataset
+│   └── preprocess.py           # Text/Image/Time preprocessing
+│
+├── semantics/
+│   ├── text_encoder.py         # frozen encoder
+│   ├── bertopic_llm.py         # BERTopic + LLM filter
+│   └── shap_mapper.py          # Topic → SHAP design semantics
+│
+├── alignment/
+│   └── clip_alignment.py       # Text–Image CLIP alignment
+│
+├── generation/
+│   ├── sds.py                  # SDS loss
+│   ├── nerf.py                 # NeRF backbone (implicit)
+│   ├── mesh_vae_pbr.py         # Mesh-VAE-PBR
+│
+├── explain/
+│   ├── gradcam.py              # Geometry Grad-CAM
+│   └── shap_analysis.py        # SHAP attribution
+│
+├── losses/
+│   └── losses.py               # All losses (Eq. 8–14)
+│
+├── engine/
+│   └── trainer.py              # End-to-end optimization loop
+│
+└── main.py                     # Entry point
