@@ -1,0 +1,18 @@
+seed: 0
+device: cuda
+dataset:
+  path_jsonl: data/examples.jsonl
+  image_root: data/images
+semantic:
+  topic_k: 12
+  use_bertopic: true
+  llm_filter: heuristic
+  lambda_kl: 0.5
+generation:
+  impl: shapee
+  shapee_steps: 64
+  guidance_scale: 15.0
+postprocess:
+  tex_res: 1024
+  out_dir: outputs
+  export_name: cox3d_asset

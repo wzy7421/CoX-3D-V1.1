@@ -1,0 +1,22 @@
+numpy
+pyyaml
+tqdm
+pillow
+scikit-learn
+
+# Optional semantic modeling (ELLM)
+bertopic
+
+# Optional CLIP module (kept for methodological completeness)
+git+https://github.com/openai/CLIP.git
+
+# Minimal runnable text-to-3D instantiation
+git+https://github.com/openai/shap-e.git
+
+# Mesh & UV + export
+trimesh
+xatlas
+
+# Torch (install separately for your CUDA if needed; kept here for completeness)
+torch
+torchvision
