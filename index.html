@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CoX‑3D: Explainable Generative 3D Design</title>
+  <meta name="description" content="CoX‑3D — a data‑driven and explainable framework for generative 3D product design with social media semantics." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    .container-narrow { max-width: 1100px; }
+    .badge { border:1px solid rgba(2,6,23,.15); border-radius:9999px; padding:.125rem .5rem; font-size:.75rem; display:inline-flex; align-items:center; gap:.35rem; }
+    .card { border:1px solid rgba(2,6,23,.08); border-radius:1rem; background:#fff; box-shadow:0 6px 24px rgba(2,6,23,.06); }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800">
+  <!-- Header -->
+  <header class="border-b border-slate-200 bg-white/75 backdrop-blur sticky top-0 z-30">
+    <div class="mx-auto container-narrow px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="./assets/cox3d-logo.svg" alt="CoX-3D Logo" class="h-8 w-8" onerror="this.style.display='none'">
+        <h1 class="text-xl font-bold tracking-tight">CoX‑3D</h1>
+        <span class="badge">v1.0.0</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-slate-900">About</a>
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#quickstart" class="hover:text-slate-900">Quickstart</a>
+        <a href="#repro" class="hover:text-slate-900">Reproducibility</a>
+        <a href="#datasets" class="hover:text-slate-900">Datasets</a>
+        <a href="#results" class="hover:text-slate-900">Results</a>
+        <a href="#citation" class="hover:text-slate-900">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="mx-auto container-narrow px-4 pt-10 pb-12">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
+          Explainable Generative 3D Design<br>
+          <span class="text-slate-500 font-semibold">driven by Social Media Semantics</span>
+        </h2>
+        <p class="mt-4 text-slate-600">CoX‑3D is an end‑to‑end pipeline connecting user‑generated content (UGC) to manufacturable 3D models. It integrates <strong>requirement modeling</strong>, <strong>multimodal prompt engineering</strong>, <strong>3D generation with DfM</strong>, and <strong>interpretable optimization</strong>.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://github.com/REPLACE_WITH_YOUR_ORG/CoX-3D" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-4 py-2.5 hover:bg-slate-800">View on GitHub</a>
+          <a href="#quickstart" class="inline-flex items-center gap-2 rounded-xl bg-white border px-4 py-2.5 hover:bg-slate-50">Get Started</a>
+          <span class="badge">MIT</span>
+          <span class="badge">Python</span>
+          <span class="badge">Diffusion · NeRF · XAI</span>
+        </div>
+      </div>
+      <div class="card p-4">
+        <img src="./assets/hero-overview.png" alt="CoX‑3D Overview" class="rounded-xl w-full h-auto" onerror="this.style.display='none'">
+        <p class="text-xs text-slate-500 mt-2">Figure: CoX‑3D overview — Requirement modeling → Multimodal generation → DfM verification → Interpretable optimization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto container-narrow px-4 pb-12">
+    <div class="card p-6">
+      <h3 class="text-xl font-bold">About the Project</h3>
+      <p class="mt-3 text-slate-700">
+        This repository accompanies the manuscript <em>“Explainable Generative 3D Design Driven by Social Media Semantics”</em> (under review). It provides runnable code, example data, and instructions to reproduce the main results. This website is a static companion page summarizing key information for reviewers.
+      </p>
+      <ul class="mt-4 list-disc pl-6 text-slate-700">
+        <li><strong>R1</strong>: UGC‑driven requirement modeling with BERTopic and LLM structuring.</li>
+        <li><strong>R2</strong>: Multimodal prompt engineering (text, image, hybrid).</li>
+        <li><strong>R3</strong>: 3D generation with diffusion/NeRF and Design‑for‑Manufacturability checks.</li>
+        <li><strong>R4</strong>: Interpretable optimization using Grad‑CAM and multi‑metric analytics.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="mx-auto container-narrow px-4 pb-12">
+    <h3 class="text-xl font-bold mb-4">Key Features</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-5">
+        <h4 class="font-semibold">UGC → Semantic Specs</h4>
+        <p class="text-sm mt-2">Transform noisy social media content into structured, traceable design requirements.</p>
+      </div>
+      <div class="card p-5">
+        <h4 class="font-semibold">Multimodal Generation</h4>
+        <p class="text-sm mt-2">Text‑to‑Image, Image‑to‑Image, and Text+Image fusion with diffusion priors and NeRF.</p>
+      </div>
+      <div class="card p-5">
+        <h4 class="font-semibold">Explainability & DfM</h4>
+        <p class="text-sm mt-2">Grad‑CAM overlays, quantitative metrics, and topology checks for manufacturability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quickstart -->
+  <section id="quickstart" class="mx-auto container-narrow px-4 pb-12">
+    <div class="card p-6">
+      <h3 class="text-xl font-bold">Quickstart</h3>
+      <ol class="mt-3 space-y-3 text-slate-700">
+        <li><span class="font-semibold">Environment.</span> Install <code>Python ≥ 3.9</code>. Optional: CUDA for GPU.</li>
+        <li><span class="font-semibold">Install.</span> <code>pip install -r requirements.txt</code></li>
+        <li><span class="font-semibold">Models.</span> <code>bash scripts/download_models.sh</code> (instructions for any external weights).</li>
+        <li><span class="font-semibold">Sample data.</span> Unzip <code>examples/sample_data.zip</code> to <code>examples/sample_data/</code>.</li>
+        <li><span class="font-semibold">Run demo.</span> <code>python tools/demo.py --mode ti2d --config configs/cox3d_demo.yaml</code></li>
+        <li><span class="font-semibold">Reproduce results.</span> See <code>docs/reproduction.md</code>.</li>
+      </ol>
+      <details class="mt-4">
+        <summary class="cursor-pointer text-sm text-slate-600">Show minimal commands</summary>
+<pre class="mt-2 bg-slate-50 border rounded-xl p-4 overflow-auto text-sm"><code>python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python tools/demo.py --mode ti2d --config configs/cox3d_demo.yaml --input_text "retro-futuristic hair dryer" --input_image examples/sample_data/images/ref_01.jpg --save_cam --multi_view 4
+</code></pre>
+      </details>
+    </div>
+  </section>
+
+  <!-- Reproducibility (no checklist tips shown here) -->
+  <section id="repro" class="mx-auto container-narrow px-4 pb-12">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-6">
+        <h3 class="text-lg font-bold">Reproducibility</h3>
+        <ul class="mt-3 list-disc pl-6 text-slate-700">
+          <li>Exact steps for figures/tables: see <code>docs/reproduction.md</code></li>
+          <li>Data availability summary: see <code>DATA_AVAILABILITY.md</code></li>
+          <li>License: MIT (see <code>LICENSE</code>)</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-lg font-bold">Project Structure</h3>
+<pre class="mt-3 bg-slate-50 border rounded-xl p-4 overflow-auto text-xs leading-5"><code>CoX-3D/
+├─ configs/
+├─ docs/
+├─ examples/
+├─ scripts/
+├─ src/
+├─ static/
+├─ tools/
+├─ README.md
+├─ DATA_AVAILABILITY.md
+└─ LICENSE
+</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Datasets -->
+  <section id="datasets" class="mx-auto container-narrow px-4 pb-12">
+    <div class="card p-6">
+      <h3 class="text-xl font-bold">Datasets</h3>
+      <p class="mt-2 text-slate-700">We rely on public datasets (e.g., COCO, KITTI) and a minimal in‑house subset for case studies. Public datasets must be obtained from their official sources and used under their licenses. We provide <strong>minimal sample data</strong> in <code>examples/sample_data.zip</code> solely to verify the pipeline.</p>
+    </div>
+  </section>
+
+  <!-- Results gallery -->
+  <section id="results" class="mx-auto container-narrow px-4 pb-16">
+    <h3 class="text-xl font-bold mb-4">Results (Teaser)</h3>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img class="rounded-xl shadow" src="./assets/result_1.png" alt="Result 1" onerror="this.style.display='none'">
+      <img class="rounded-xl shadow" src="./assets/result_2.png" alt="Result 2" onerror="this.style.display='none'">
+      <img class="rounded-xl shadow" src="./assets/result_3.png" alt="Result 3" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <!-- Citation & Contact -->
+  <section id="citation" class="mx-auto container-narrow px-4 pb-20">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-6">
+        <h3 class="text-lg font-bold">Citation</h3>
+        <p class="mt-2 text-slate-700">If you find CoX‑3D useful, please cite:</p>
+<pre class="mt-3 bg-slate-50 border rounded-xl p-4 overflow-auto text-xs"><code>@article{wang2025cox3d,
+  title   = {Explainable Generative 3D Design Driven by Social Media Semantics},
+  author  = {Wang, Zhenyu and Sato, Karen and Wang, Jianmin},
+  journal = {Under review at Nature Communications},
+  year    = {2025},
+  url     = {https://github.com/REPLACE_WITH_YOUR_ORG/CoX-3D}
+}
+</code></pre>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-lg font-bold">Contact</h3>
+        <ul class="mt-3 space-y-1 text-slate-700">
+          <li>Maintainer: Zhenyu Wang</li>
+          <li>Email: <a class="text-sky-700 underline" href="mailto:2411673@tongji.edu.cn">2411673@tongji.edu.cn</a></li>
+          <li>ORCID: <a class="text-sky-700 underline" href="https://orcid.org/0000-0001-7645-5667">0000-0001-7645-5667</a></li>
+        </ul>
+        <p class="mt-3 text-xs text-slate-500">© 2025 CoX‑3D. Released under MIT License.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+    <div class="mx-auto container-narrow px-4">This site summarizes CoX‑3D for review and reproducibility. No third‑party datasets are redistributed here.</div>
+  </footer>
+</body>
+</html>

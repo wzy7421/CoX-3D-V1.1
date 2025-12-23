@@ -1,0 +1,13 @@
+{
+  "run_id": "demo_001",
+  "metrics": {
+    "SSIM": 0.82,
+    "LPIPS": 0.21,
+    "FID": 32.5,
+    "polygon_count": 15432,
+    "vertex_count": 7850,
+    "wall_thickness_valid": true,
+    "overhang_angle_mean": 37.5
+  },
+  "notes": "Sample results for verification only. Values are illustrative."
+}
